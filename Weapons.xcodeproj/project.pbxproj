@@ -13,6 +13,7 @@
 		8367C67520CAA48E000E214C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8367C67320CAA48E000E214C /* LaunchScreen.storyboard */; };
 		8367C67D20CAA51C000E214C /* WeaponsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8367C67C20CAA51C000E214C /* WeaponsTableViewController.swift */; };
 		8367C67F20CAAEF8000E214C /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8367C67E20CAAEF8000E214C /* CardCell.swift */; };
+		8367C68120CAC415000E214C /* UIViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8367C68020CAC415000E214C /* UIViewHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8367C67620CAA48E000E214C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8367C67C20CAA51C000E214C /* WeaponsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponsTableViewController.swift; sourceTree = "<group>"; };
 		8367C67E20CAAEF8000E214C /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		8367C68020CAC415000E214C /* UIViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				8367C66A20CAA48D000E214C /* AppDelegate.swift */,
 				8367C66E20CAA48D000E214C /* Main.storyboard */,
+				8367C68020CAC415000E214C /* UIViewHelper.swift */,
 				8367C67E20CAAEF8000E214C /* CardCell.swift */,
 				8367C67C20CAA51C000E214C /* WeaponsTableViewController.swift */,
 				8367C67120CAA48E000E214C /* Assets.xcassets */,
@@ -140,6 +143,7 @@
 			files = (
 				8367C67D20CAA51C000E214C /* WeaponsTableViewController.swift in Sources */,
 				8367C66B20CAA48D000E214C /* AppDelegate.swift in Sources */,
+				8367C68120CAC415000E214C /* UIViewHelper.swift in Sources */,
 				8367C67F20CAAEF8000E214C /* CardCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
