@@ -49,7 +49,16 @@ class WeaponsTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        weapons.remove(at: indexPath.row)
+        weaponTypes.remove(at: indexPath.row)
+        weaponImages.remove(at: indexPath.row)
+        origins.remove(at: indexPath.row)
+        favourites.remove(at: indexPath.row)
+        
+        print(weapons.count)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return weapons.count
