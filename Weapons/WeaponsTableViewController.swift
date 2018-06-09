@@ -14,7 +14,24 @@ class WeaponsTableViewController: UITableViewController {
     var weaponTypes = ["自动步枪","狙击枪","冷兵器","机枪","自动步枪","狙击枪","自动步枪","冲锋枪","近战武器","半自动步枪","冲锋枪"]
     var origins = ["奥地利","英国","中国","前苏联","俄罗斯","德国","英国","以色列","美国","前苏联","美国"]
     var weaponImages = ["aug","awm","crossbow","dp28","groza","kar98k","m16a4","microuzi","pan","sks","ump9"]
-
+    
+    var favourites = Array(repeating: false, count: 11)
+    
+    @IBAction func favBtnTap(_ sender: UIButton) {
+        let btnPos = sender.convert(CGPoint.zero, to: self.tableView)
+        
+        print("爱心按钮在table view中的位置",btnPos)
+        let indexPath = tableView.indexPathForRow(at: btnPos)!
+        
+        print("爱心按钮所在行",indexPath)
+        self.favourites[indexPath.row] = !self.favourites[indexPath.row]
+        
+        let cell = tableView.cellForRow(at: indexPath) as! CardCell
+        
+        cell.favourite = self.favourites[indexPath.row]
+       
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
