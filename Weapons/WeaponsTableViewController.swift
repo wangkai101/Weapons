@@ -65,6 +65,7 @@ class WeaponsTableViewController: UITableViewController {
         cell.weaponLable.text = weapons[indexPath.row]
         cell.originLable.text = origins[indexPath.row]
         cell.backImageView.image = UIImage(named: weaponImages[indexPath.row])
+        cell.favourite = favourites[indexPath.row]
 
         return cell
     }
