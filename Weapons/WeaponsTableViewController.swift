@@ -14,6 +14,7 @@ class WeaponsTableViewController: UITableViewController {
     var weaponTypes = ["自动步枪","狙击枪","冷兵器","机枪","自动步枪","狙击枪","自动步枪","冲锋枪","近战武器","半自动步枪","冲锋枪"]
     var origins = ["奥地利","英国","中国","前苏联","俄罗斯","德国","英国","以色列","美国","前苏联","美国"]
     var weaponImages = ["aug","awm","crossbow","dp28","groza","kar98k","m16a4","microuzi","pan","sks","ump9"]
+   
     
     var favourites = Array(repeating: false, count: 11)
     
@@ -53,6 +54,7 @@ class WeaponsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let favAction = UIContextualAction(style: .normal, title: "Like") { (_, _, completion) in
+           
             completion(true)
         }
         favAction.image = #imageLiteral(resourceName: "fav")
@@ -155,14 +157,18 @@ class WeaponsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-    }
-    */
+        let row = tableView.indexPathForSelectedRow!.row
+        let destination = segue.destination as!WeaponDetailViewController
+        
+        destination.imageName = weaponImages[row]
+   }
+   
 
 }

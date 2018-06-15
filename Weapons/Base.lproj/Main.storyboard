@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d8L-Bg-fDr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9D2-QY-jZw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -7,10 +7,11 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Weapons Table View Controller-->
+        <!--绝地求生武器库-->
         <scene sceneID="CX2-U8-8LP">
             <objects>
                 <tableViewController id="d8L-Bg-fDr" customClass="WeaponsTableViewController" customModule="Weapons" customModuleProvider="target" sceneMemberID="viewController">
@@ -144,6 +145,7 @@
                                     <outlet property="originLable" destination="nO8-jS-ogj" id="OSv-Py-CxE"/>
                                     <outlet property="typeLable" destination="1XM-gy-5ok" id="zZ1-gE-IGc"/>
                                     <outlet property="weaponLable" destination="pTW-gb-egx" id="jPX-QJ-KpX"/>
+                                    <segue destination="ZA0-Vy-QNl" kind="show" id="wj2-Nc-YZ6"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -152,8 +154,56 @@
                             <outlet property="delegate" destination="d8L-Bg-fDr" id="MvJ-FK-mfy"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="绝地求生武器库" id="VBm-Ws-CV1"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o8j-P0-LZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1560.8" y="-20.239880059970016"/>
+        </scene>
+        <!--Weapon Detail View Controller-->
+        <scene sceneID="bB8-ea-udb">
+            <objects>
+                <viewController id="ZA0-Vy-QNl" customClass="WeaponDetailViewController" customModule="Weapons" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Htz-Dn-fKF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hj0-6X-WtO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Hj0-6X-WtO" firstAttribute="centerY" secondItem="Htz-Dn-fKF" secondAttribute="centerY" id="09q-tS-SSs"/>
+                            <constraint firstItem="Hj0-6X-WtO" firstAttribute="width" secondItem="Htz-Dn-fKF" secondAttribute="width" id="DZa-Kf-f06"/>
+                            <constraint firstItem="Hj0-6X-WtO" firstAttribute="centerX" secondItem="Htz-Dn-fKF" secondAttribute="centerX" id="JZe-wi-rtG"/>
+                            <constraint firstItem="Hj0-6X-WtO" firstAttribute="height" secondItem="Htz-Dn-fKF" secondAttribute="height" id="Ua7-GB-ASs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DjH-qo-5rn"/>
+                    </view>
+                    <connections>
+                        <outlet property="headerimageView" destination="Hj0-6X-WtO" id="Nnf-4s-CEz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dB1-Y3-x9w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2212" y="8.5457271364317844"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7lt-Ki-IL0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9D2-QY-jZw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="0za-mm-B9k">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="d8L-Bg-fDr" kind="relationship" relationship="rootViewController" id="zaO-fM-zlO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AVr-Yb-VX8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="621.60000000000002" y="-20.239880059970016"/>
         </scene>
