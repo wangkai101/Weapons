@@ -49,15 +49,55 @@ class WeaponsTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        weapons.remove(at: indexPath.row)
-        weaponTypes.remove(at: indexPath.row)
-        weaponImages.remove(at: indexPath.row)
-        origins.remove(at: indexPath.row)
-        favourites.remove(at: indexPath.row)
+    
+    
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let favAction = UIContextualAction(style: .normal, title: "Like") { (_, _, completion) in
+            completion(true)
+        }
+        favAction.image = #imageLiteral(resourceName: "fav")
+        favAction.backgroundColor = UIColor.purple
         
-        print(weapons.count)
-        tableView.deleteRows(at: [indexPath], with: .automatic)
+        let config = UISwipeActionsConfiguration(actions: [favAction])
+        return config
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let delAction = UIContextualAction(style: .destructive, title: "Delete") { (_, _, completion) in
+            
+            self.weapons.remove(at: indexPath.row)
+            self.weaponTypes.remove(at: indexPath.row)
+            self.weaponImages.remove(at: indexPath.row)
+            self.origins.remove(at: indexPath.row)
+            self.favourites.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+            completion(true)
+        }
+        
+        let shareAction = UIContextualAction(style: .normal, title: "Share") { (_, _, completion) in
+            let text = "这是绝对求生中的帅气\(self.weapons[indexPath.row])! "
+            let image = UIImage(named: self.weaponImages[indexPath.row])!
+            let ac = UIActivityViewController(activityItems: [text, image], applicationActivities: nil)
+            
+            if let pc = ac.popoverPresentationController {
+                if let cell = tableView.cellForRow(at: indexPath) {
+                    pc.sourceView = cell
+                    pc.sourceRect = cell.bounds
+                }
+            }
+            self.present(ac, animated: true)
+            
+            completion(true)
+        }
+        
+        shareAction.backgroundColor = UIColor.orange
+        
+        let config = UISwipeActionsConfiguration(actions: [delAction, shareAction])
+        return config
+        
+        
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
