@@ -249,12 +249,14 @@ class WeaponsTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        let row = tableView.indexPathForSelectedRow!.row
-        let destination = segue.destination as!WeaponDetailViewController
-        
-        destination.imageName = weapons[row].image
+        if segue.identifier == "showWeaponDetail" {
+            let row = tableView.indexPathForSelectedRow!.row
+            
+            let destination = segue.destination as!DetailController
+            
+            destination.weapon = weapons[row]
+        }
+       
    }
    
 
