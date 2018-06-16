@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		830786E720D3A7EB00D58515 /* WeaponDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830786E620D3A7EB00D58515 /* WeaponDetailViewController.swift */; };
+		830786E920D4CFED00D58515 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830786E820D4CFED00D58515 /* Weapon.swift */; };
 		8367C66B20CAA48D000E214C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8367C66A20CAA48D000E214C /* AppDelegate.swift */; };
 		8367C67020CAA48D000E214C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8367C66E20CAA48D000E214C /* Main.storyboard */; };
 		8367C67220CAA48E000E214C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8367C67120CAA48E000E214C /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		830786E620D3A7EB00D58515 /* WeaponDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponDetailViewController.swift; sourceTree = "<group>"; };
+		830786E820D4CFED00D58515 /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
 		8367C66720CAA48D000E214C /* Weapons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weapons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8367C66A20CAA48D000E214C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8367C66F20CAA48D000E214C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				8367C68020CAC415000E214C /* UIViewHelper.swift */,
 				8367C67E20CAAEF8000E214C /* CardCell.swift */,
 				8367C67C20CAA51C000E214C /* WeaponsTableViewController.swift */,
+				830786E820D4CFED00D58515 /* Weapon.swift */,
 				8367C67120CAA48E000E214C /* Assets.xcassets */,
 				8367C67320CAA48E000E214C /* LaunchScreen.storyboard */,
 				8367C67620CAA48E000E214C /* Info.plist */,
@@ -149,6 +152,7 @@
 				830786E720D3A7EB00D58515 /* WeaponDetailViewController.swift in Sources */,
 				8367C68120CAC415000E214C /* UIViewHelper.swift in Sources */,
 				8367C67F20CAAEF8000E214C /* CardCell.swift in Sources */,
+				830786E920D4CFED00D58515 /* Weapon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
