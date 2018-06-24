@@ -7,6 +7,8 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -175,6 +177,32 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="Cmw-Mw-FWW" userLabel="Footer View">
+                            <rect key="frame" x="0.0" y="372" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnW-h3-hZa" userLabel="Rate">
+                                    <rect key="frame" x="0.0" y="-3" width="375" height="50"/>
+                                    <color key="backgroundColor" name="theme"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="J89-xn-v2N"/>
+                                    </constraints>
+                                    <state key="normal" title="Rate">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <segue destination="Hc2-CY-KNC" kind="presentation" modalPresentationStyle="overCurrentContext" id="oVc-oU-9MU"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="xnW-h3-hZa" secondAttribute="trailing" id="VHY-2d-CBv"/>
+                                <constraint firstItem="xnW-h3-hZa" firstAttribute="centerX" secondItem="Cmw-Mw-FWW" secondAttribute="centerX" id="VwT-pY-KEE"/>
+                                <constraint firstItem="xnW-h3-hZa" firstAttribute="centerY" secondItem="Cmw-Mw-FWW" secondAttribute="centerY" id="hjZ-pu-fBN"/>
+                                <constraint firstItem="xnW-h3-hZa" firstAttribute="leading" secondItem="Cmw-Mw-FWW" secondAttribute="leading" id="vlg-ox-m2h"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailCell" id="hMb-rA-aAX" customClass="DetailCell" customModule="Weapons" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="328" width="375" height="44"/>
@@ -223,11 +251,131 @@
                     </tableView>
                     <connections>
                         <outlet property="headerImageView" destination="9yk-QJ-0t6" id="SQk-ho-PJU"/>
+                        <outlet property="ratingBtn" destination="xnW-h3-hZa" id="FTJ-qP-uDm"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7R9-RR-lX8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2303" y="-20"/>
+        </scene>
+        <!--Rate Controller-->
+        <scene sceneID="hqZ-iL-jDX">
+            <objects>
+                <viewController id="Hc2-CY-KNC" customClass="RateController" customModule="Weapons" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nQc-7T-6Wa" userLabel="Root View">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9t6-nj-h6P">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wvx-cu-0mm" userLabel="effect View">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="4hX-3L-ptG">
+                                            <rect key="frame" x="115" y="221" width="145" height="225"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUT-0a-2XB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="145" height="33"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <state key="normal" title="👓维多利亚内衣秀">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="cco-ck-Iaj" kind="unwind" identifier="5" unwindAction="backToDetailWithSegue:" id="gDV-tu-CKJ"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4r3-WI-Jv4">
+                                                    <rect key="frame" x="17.5" y="48" width="110" height="33"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <state key="normal" title="😂李时珍的皮">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="cco-ck-Iaj" kind="unwind" identifier="4" unwindAction="backToDetailWithSegue:" id="nyn-04-h7w"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aq3-d0-gQV">
+                                                    <rect key="frame" x="35" y="96" width="75" height="33"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <state key="normal" title="😅秀翻车">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="cco-ck-Iaj" kind="unwind" identifier="3" unwindAction="backToDetailWithSegue:" id="S8f-JJ-ZyQ"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6M2-2w-f0N">
+                                                    <rect key="frame" x="35" y="144" width="75" height="33"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <state key="normal" title="😁陈独秀">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="cco-ck-Iaj" kind="unwind" identifier="2" unwindAction="backToDetailWithSegue:" id="U3u-Ek-Pd2"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TN2-C4-Mfq">
+                                                    <rect key="frame" x="17.5" y="192" width="110" height="33"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <state key="normal" title="😄造化钟神秀">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="cco-ck-Iaj" kind="unwind" identifier="1" unwindAction="backToDetailWithSegue:" id="Vw3-in-ZYq"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <gestureRecognizers/>
+                                            <connections>
+                                                <outletCollection property="gestureRecognizers" destination="Nul-Hu-oPd" appends="YES" id="hWl-9E-fpU"/>
+                                            </connections>
+                                        </stackView>
+                                    </subviews>
+                                    <gestureRecognizers/>
+                                    <constraints>
+                                        <constraint firstItem="4hX-3L-ptG" firstAttribute="centerY" secondItem="wvx-cu-0mm" secondAttribute="centerY" id="LIz-0f-xp0"/>
+                                        <constraint firstItem="4hX-3L-ptG" firstAttribute="centerX" secondItem="wvx-cu-0mm" secondAttribute="centerX" id="zLJ-dK-cNI"/>
+                                    </constraints>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="CqR-cV-p6v" appends="YES" id="E2d-m6-Zsc"/>
+                                    </connections>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9t6-nj-h6P" firstAttribute="top" secondItem="nQc-7T-6Wa" secondAttribute="top" id="7Qg-cp-x30"/>
+                            <constraint firstAttribute="bottom" secondItem="9t6-nj-h6P" secondAttribute="bottom" id="Xwc-3v-w7X"/>
+                            <constraint firstAttribute="trailing" secondItem="9t6-nj-h6P" secondAttribute="trailing" id="vBH-yp-78F"/>
+                            <constraint firstItem="9t6-nj-h6P" firstAttribute="leading" secondItem="nQc-7T-6Wa" secondAttribute="leading" id="w1l-Op-Imx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5NA-kk-S2X"/>
+                    </view>
+                    <connections>
+                        <outlet property="stackView" destination="4hX-3L-ptG" id="hbZ-Lk-7CY"/>
+                        <outletCollection property="rateButtons" destination="dUT-0a-2XB" collectionClass="NSMutableArray" id="GcX-Yf-mfF"/>
+                        <outletCollection property="rateButtons" destination="4r3-WI-Jv4" collectionClass="NSMutableArray" id="eqm-Gg-5z0"/>
+                        <outletCollection property="rateButtons" destination="Aq3-d0-gQV" collectionClass="NSMutableArray" id="3Sf-Dw-V7n"/>
+                        <outletCollection property="rateButtons" destination="6M2-2w-f0N" collectionClass="NSMutableArray" id="bvX-Oz-PGi"/>
+                        <outletCollection property="rateButtons" destination="TN2-C4-Mfq" collectionClass="NSMutableArray" id="siv-WM-QuX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hrT-eG-HMW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="cco-ck-Iaj" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="CqR-cV-p6v">
+                    <connections>
+                        <action selector="tapBackground:" destination="Hc2-CY-KNC" id="GX3-Ik-3ST"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Nul-Hu-oPd">
+                    <connections>
+                        <action selector="dragStackView:" destination="Hc2-CY-KNC" id="uiM-Nb-QC3"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3035" y="-7"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7lt-Ki-IL0">
@@ -251,5 +399,8 @@
     <resources>
         <image name="back" width="65" height="42"/>
         <image name="unfav" width="24" height="24"/>
+        <namedColor name="theme">
+            <color red="0.23137254901960785" green="0.39215686274509803" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

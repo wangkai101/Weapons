@@ -139,5 +139,13 @@ class DetailController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBOutlet weak var ratingBtn: UIButton!
+    @IBAction func backToDetail(segue: UIStoryboardSegue){
+        
+        if let rating = segue.identifier {
+            weapon.rating = rating
+            ratingBtn.setTitle("打分：\(rating)星", for: .normal)
+        }
+    }
 
 }
