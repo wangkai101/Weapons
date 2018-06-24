@@ -200,5 +200,8 @@ class WeaponsTableViewController: UITableViewController {
        
    }
    
+    @IBAction func backToHome(segue: UIStoryboardSegue)  {
+        
+    }
 
 }

@@ -25,3 +25,15 @@ struct Weapon: Codable {
 
 
 
+
+struct WeaponSpacs: Codable {
+    var types = [String]()
+    var bullets = [Double]()
+}
+
+
+struct Origin: Codable {
+    var continent = ""
+    var countries = [String]()
+}
+
