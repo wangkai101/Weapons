@@ -13,6 +13,7 @@
 		830786ED20D4E7CA00D58515 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830786EC20D4E7CA00D58515 /* DetailCell.swift */; };
 		830786EF20DF5E1E00D58515 /* NaviExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830786EE20DF5E1E00D58515 /* NaviExt.swift */; };
 		830786F120DF75AB00D58515 /* RateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830786F020DF75AB00D58515 /* RateController.swift */; };
+		830786F320DF934A00D58515 /* weapons.json in Resources */ = {isa = PBXBuildFile; fileRef = 830786F220DF934900D58515 /* weapons.json */; };
 		8367C66B20CAA48D000E214C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8367C66A20CAA48D000E214C /* AppDelegate.swift */; };
 		8367C67020CAA48D000E214C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8367C66E20CAA48D000E214C /* Main.storyboard */; };
 		8367C67220CAA48E000E214C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8367C67120CAA48E000E214C /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		830786EC20D4E7CA00D58515 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		830786EE20DF5E1E00D58515 /* NaviExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviExt.swift; sourceTree = "<group>"; };
 		830786F020DF75AB00D58515 /* RateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateController.swift; sourceTree = "<group>"; };
+		830786F220DF934900D58515 /* weapons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weapons.json; sourceTree = "<group>"; };
 		8367C66720CAA48D000E214C /* Weapons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weapons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8367C66A20CAA48D000E214C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8367C66F20CAA48D000E214C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				8367C66E20CAA48D000E214C /* Main.storyboard */,
 				830786F020DF75AB00D58515 /* RateController.swift */,
 				830786EE20DF5E1E00D58515 /* NaviExt.swift */,
+				830786F220DF934900D58515 /* weapons.json */,
 				830786EC20D4E7CA00D58515 /* DetailCell.swift */,
 				830786EA20D4E5B200D58515 /* DetailController.swift */,
 				830786E620D3A7EB00D58515 /* WeaponDetailViewController.swift */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8367C67520CAA48E000E214C /* LaunchScreen.storyboard in Resources */,
+				830786F320DF934A00D58515 /* weapons.json in Resources */,
 				8367C67220CAA48E000E214C /* Assets.xcassets in Resources */,
 				8367C67020CAA48D000E214C /* Main.storyboard in Resources */,
 			);

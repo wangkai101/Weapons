@@ -1,4 +1,4 @@
-struct Weapon {
+struct Weapon: Codable {
     var name = ""
     var type = ""
     var origin = ""
