@@ -15,6 +15,8 @@ class DetailController: UITableViewController {
     
  
     var weapon : Weapon!
+    var headerView : UIView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,21 @@ class DetailController: UITableViewController {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.tintColor = UIColor(named: "theme")
+        
+        headerView = tableView.tableHeaderView
+        tableView.tableHeaderView = nil
+        tableView.addSubview(headerView)
+        
+        tableView.contentInset = UIEdgeInsets(top: 300, left: 0, bottom: 0, right: 0)
+    }
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("垂直滚动了：",scrollView.contentOffset.y)
+        
+        let offsetY = scrollView.contentOffset.y
+        
+        headerView.frame = CGRect(x: 0, y: offsetY, width: scrollView.bounds.width, height: -offsetY)
+        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
