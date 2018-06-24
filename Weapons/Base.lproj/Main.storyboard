@@ -153,7 +153,9 @@
                             <outlet property="delegate" destination="d8L-Bg-fDr" id="MvJ-FK-mfy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="绝地求生武器库" id="VBm-Ws-CV1"/>
+                    <navigationItem key="navigationItem" title="绝地求生武器库" id="VBm-Ws-CV1">
+                        <barButtonItem key="backBarButtonItem" title=" " id="stT-Kx-IHw"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o8j-P0-LZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -163,7 +165,7 @@
         <scene sceneID="Qf1-qq-djw">
             <objects>
                 <tableViewController id="f8F-Ls-yxU" customClass="DetailController" customModule="Weapons" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Nt5-YD-9qD">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Nt5-YD-9qD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -230,9 +232,9 @@
         <!--Navigation Controller-->
         <scene sceneID="7lt-Ki-IL0">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9D2-QY-jZw" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" id="9D2-QY-jZw" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="0za-mm-B9k">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="back" largeTitles="YES" backIndicatorTransitionMaskImage="back" id="0za-mm-B9k">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -247,6 +249,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="back" width="65" height="42"/>
         <image name="unfav" width="24" height="24"/>
     </resources>
 </document>
