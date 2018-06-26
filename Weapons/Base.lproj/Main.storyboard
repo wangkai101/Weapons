@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9D2-QY-jZw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9D2-QY-jZw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -189,13 +189,26 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gun-placeholder2" translatesAutoresizingMaskIntoConstraints="NO" id="1kY-NR-OYq">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                                 </imageView>
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFr-7u-nGP">
+                                                    <rect key="frame" x="110" y="50" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="GAn-ak-s4D"/>
+                                                        <constraint firstAttribute="width" constant="100" id="z1a-uR-gFT"/>
+                                                    </constraints>
+                                                    <state key="normal" image="play"/>
+                                                    <connections>
+                                                        <action selector="playVideo:" destination="o6y-Ba-U7R" eventType="touchUpInside" id="xi7-n6-l6n"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="1kY-NR-OYq" firstAttribute="centerX" secondItem="PhC-NU-mSc" secondAttribute="centerX" id="3Yb-yU-Jlw"/>
                                                 <constraint firstAttribute="bottom" secondItem="1kY-NR-OYq" secondAttribute="bottom" id="7Bb-Dw-Dhj"/>
                                                 <constraint firstItem="1kY-NR-OYq" firstAttribute="leading" secondItem="PhC-NU-mSc" secondAttribute="leading" id="T24-jR-SXg"/>
                                                 <constraint firstItem="1kY-NR-OYq" firstAttribute="top" secondItem="PhC-NU-mSc" secondAttribute="top" id="cND-11-VKA"/>
+                                                <constraint firstItem="DFr-7u-nGP" firstAttribute="centerY" secondItem="PhC-NU-mSc" secondAttribute="centerY" id="guA-YV-yBZ"/>
                                                 <constraint firstAttribute="trailing" secondItem="1kY-NR-OYq" secondAttribute="trailing" id="gz5-SI-hwX"/>
+                                                <constraint firstItem="DFr-7u-nGP" firstAttribute="centerX" secondItem="PhC-NU-mSc" secondAttribute="centerX" id="oYl-Q6-1bq"/>
                                                 <constraint firstItem="1kY-NR-OYq" firstAttribute="centerY" secondItem="PhC-NU-mSc" secondAttribute="centerY" id="pOI-5y-4Nw"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -406,6 +419,8 @@
                     </navigationItem>
                     <size key="freeformSize" width="320" height="1200"/>
                     <connections>
+                        <outlet property="bgimage" destination="1kY-NR-OYq" id="Ffw-d2-VDy"/>
+                        <outlet property="playBtn" destination="DFr-7u-nGP" id="oDX-xS-cAH"/>
                         <outlet property="textFieldMv" destination="Cvb-6I-OEF" id="xRk-y1-hN4"/>
                     </connections>
                 </tableViewController>
@@ -668,6 +683,7 @@
     <resources>
         <image name="back" width="65" height="42"/>
         <image name="gun-placeholder2" width="1440" height="960"/>
+        <image name="play" width="48" height="48"/>
         <image name="unfav" width="24" height="24"/>
         <namedColor name="theme">
             <color red="0.23137254901960785" green="0.39215686274509803" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

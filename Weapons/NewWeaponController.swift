@@ -7,12 +7,25 @@
 //
 
 import UIKit
+import AVKit
 
 class NewWeaponController: UITableViewController {
     
+    @IBOutlet weak var playBtn: UIButton!
+    @IBOutlet weak var bgimage: UIImageView!
     var origin = [Origin]()
     var specs :  WeaponSpacs!
     
+    var videoUrl : URL!
+    
+    @IBAction func playVideo(_ sender: Any) {
+        let playerVC = AVPlayerViewController()
+        playerVC.player = AVPlayer(url: videoUrl)
+        self.present(playerVC,animated: true) {
+            playerVC.player?.play()
+        }
+        
+    }
     
     @IBOutlet weak var textFieldMv: UITextField!
     

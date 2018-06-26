@@ -25,6 +25,7 @@
 		8367C67D20CAA51C000E214C /* WeaponsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8367C67C20CAA51C000E214C /* WeaponsTableViewController.swift */; };
 		8367C67F20CAAEF8000E214C /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8367C67E20CAAEF8000E214C /* CardCell.swift */; };
 		8367C68120CAC415000E214C /* UIViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8367C68020CAC415000E214C /* UIViewHelper.swift */; };
+		8374D7E720E1EFEB00EE7535 /* MediaSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8374D7E620E1EFEB00EE7535 /* MediaSelect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		8367C67C20CAA51C000E214C /* WeaponsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponsTableViewController.swift; sourceTree = "<group>"; };
 		8367C67E20CAAEF8000E214C /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		8367C68020CAC415000E214C /* UIViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewHelper.swift; sourceTree = "<group>"; };
+		8374D7E620E1EFEB00EE7535 /* MediaSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaSelect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				830786F220DF934900D58515 /* weapons.json */,
 				830786FA20DFAF1400D58515 /* pickerViewFill.swift */,
 				830786EC20D4E7CA00D58515 /* DetailCell.swift */,
+				8374D7E620E1EFEB00EE7535 /* MediaSelect.swift */,
 				830786EA20D4E5B200D58515 /* DetailController.swift */,
 				830786F620DF9F0200D58515 /* weaponSpecs.json */,
 				830786E620D3A7EB00D58515 /* WeaponDetailViewController.swift */,
@@ -187,6 +190,7 @@
 				8367C68120CAC415000E214C /* UIViewHelper.swift in Sources */,
 				8367C67F20CAAEF8000E214C /* CardCell.swift in Sources */,
 				830786EF20DF5E1E00D58515 /* NaviExt.swift in Sources */,
+				8374D7E720E1EFEB00EE7535 /* MediaSelect.swift in Sources */,
 				830786ED20D4E7CA00D58515 /* DetailCell.swift in Sources */,
 				830786E920D4CFED00D58515 /* Weapon.swift in Sources */,
 			);
